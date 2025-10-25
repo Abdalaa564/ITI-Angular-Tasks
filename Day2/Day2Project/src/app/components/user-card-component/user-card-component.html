@@ -1,0 +1,184 @@
+
+
+<section id="card" class="card section">
+        <!-- <div class="container section-title" data-aos="fade-up">
+            <h2>card</h2>
+            <div><span>Check Our</span> <span class="description-title">card</span></div>
+        </div> -->
+
+
+        <div class="main-wrapper">
+            <div class="container">
+                <div class="title">
+                        <h1>Best collection</h1>
+                        <p>His needs result from something escape him indeed are consectetur will</p>
+                    </div>
+
+              <div class="search-box">
+                <input type="text" [(ngModel)]="search" placeholder="Enter email to search">
+                <button (click)="searchUser()">Search</button>
+                <button (click)="resetSearch()">Reset</button>
+              </div>
+
+
+
+                <div class="product-grid">
+                      <div class="product">
+                        <div class="product-img">
+                            <img [src]="Users[0].avatar" alt="front product image">
+                            <img src="Users[1].avatar" alt="rear product image" class="rear-img">
+
+                            <div class="icon-div">
+                                <div class="icon">
+                                    <i class="bi bi-heart"></i>
+                                    <i class="bi bi-share"></i>
+                                    <i onclick="window.location.href='cardDetails.html'" class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <a class="product-name" href="productDetails.html">{{ Users[0].username }}</a>
+                                <p>{{ Users[0].email }}</p>
+                                <p>{{ Users[0].birthdate }}</p>
+                                <span class="product-price">{{ Users[0].phone }}</span>
+                                <span class="badge">{{ Users[0].role }}</span>
+                            </div>
+                            <div class="buy">
+                            </div>
+                              <a href = "#" class = "product-btn">Buy now</a>
+                        </div>
+                        <div class="star">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-number">(15)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                      <div class="product">
+                        <div class="product-img">
+                            <img [src]="Users[1].avatar" alt="front product image">
+                            <img src="Users[2].avatar" alt="rear product image" class="rear-img">
+
+                            <div class="icon-div">
+                                <div class="icon">
+                                    <i class="bi bi-heart"></i>
+                                    <i class="bi bi-share"></i>
+                                    <i onclick="window.location.href='cardDetails.html'" class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <a class="product-name" href="productDetails.html">{{ Users[1].username }}</a>
+                                <p>{{ Users[1].email }}</p>
+                                <p>{{ Users[1].birthdate }}</p>
+                                <span class="product-price">{{ Users[1].phone }}</span>
+                                <span class="badge">{{ Users[1].role }}</span>
+                            </div>
+                            <div class="buy">
+                            </div>
+                              <a href = "#" class = "product-btn">Buy now</a>
+                        </div>
+                        <div class="star">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-number">(15)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                      <div class="product">
+                        <div class="product-img">
+                            <img [src]="Users[2].avatar" alt="front product image">
+                            <img src="Users[1].avatar" alt="rear product image" class="rear-img">
+
+                            <div class="icon-div">
+                                <div class="icon">
+                                    <i class="bi bi-heart"></i>
+                                    <i class="bi bi-share"></i>
+                                    <i onclick="window.location.href='cardDetails.html'" class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <a class="product-name" href="productDetails.html">{{ Users[2].username }}</a>
+                                <p>{{ Users[2].email }}</p>
+                                <p>{{ Users[2].birthdate }}</p>
+                                <span class="product-price">{{ Users[2].phone }}</span>
+                                <span class="badge">{{ Users[2].role }}</span>
+                            </div>
+                            <div class="buy">
+                            </div>
+                              <a href = "#" class = "product-btn">Buy now</a>
+                        </div>
+                        <div class="star">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-number">(15)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-grid">
+                      <div class="product">
+                        <div class="product-img">
+                            <img [src]="Users[3].avatar" alt="front product image">
+                            <img src="Users[1].avatar" alt="rear product image" class="rear-img">
+
+                            <div class="icon-div">
+                                <div class="icon">
+                                    <i class="bi bi-heart"></i>
+                                    <i class="bi bi-share"></i>
+                                    <i onclick="window.location.href='cardDetails.html'" class="bi bi-plus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div>
+                                <a class="product-name" href="productDetails.html">{{ Users[3].username }}</a>
+                                <p>{{ Users[3].email }}</p>
+                                <p>{{ Users[3].birthdate }}</p>
+                                <span class="product-price">{{ Users[3].phone }}</span>
+                                <span class="badge">{{ Users[3].role }}</span>
+                            </div>
+                            <div class="buy">
+                            </div>
+                              <a href = "#" class = "product-btn">Buy now</a>
+                        </div>
+                        <div class="star">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                                <span class="rating-number">(15)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>

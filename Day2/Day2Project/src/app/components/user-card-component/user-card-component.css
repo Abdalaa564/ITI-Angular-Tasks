@@ -1,0 +1,294 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* font-family: "Tagesschrift", system-ui; */
+
+
+:root {
+    --default-color: rgba(255, 255, 255, 0.8);
+    --accent-color: #e3a127;
+    --surface-color: #1b262c;
+    --contrast-color: #ffffff;
+    --font-familly:"Inter", sans-serif;
+
+}
+
+body{
+    font-family: var(--font-familly);
+    background-color: var(--body-color);
+}
+
+
+/*--------------------------------------------------------------
+# card Section
+--------------------------------------------------------------*/
+.card .card-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    margin: 0 0 40px;
+    list-style: none;
+}
+
+.card .card-filters li {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 25px;
+    cursor: pointer;
+    background: var(--surface-color);
+    color: var(--default-color);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.5s ease;
+}
+
+.card .card-filters li i {
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.card .card-filters li:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+}
+
+.card .card-filters li:hover i {
+    transform: scale(1.1);
+}
+
+.card .card-filters li.filter-active {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+@media (max-width: 768px) {
+    .card .card-filters {
+        gap: 10px;
+    }
+
+    .card .card-filters li {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# card Section
+--------------------------------------------------------------*/
+
+.main-wrapper{
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.title{
+    margin-bottom: 3rem;
+}
+.title h1{
+    text-align: center;
+    /* opacity: 0.7; */
+    color: #2d465e;
+}
+.title p{
+    text-align: center;
+    /* opacity: 0.7; */
+    color: #212529;
+    margin-bottom: 0;
+}
+.product{
+    width: 300px;
+    background-color: #fff;
+    /* background-color: #fa0000; */
+    border-radius: 0.4rem;
+    position: relative;
+    overflow: hidden;
+    transform: scale(0.95);
+    transition: transform 0.5s, box-shadow 0.4s ease-out;
+    box-shadow: 0 6px 12px -7px rgba(171, 171, 171, 1);
+}
+.product:hover{
+    transform: scale(1);
+    box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.2);
+
+}
+.product-img {
+    height: 300px;
+    background-color: #dee2e6;
+    position: relative;
+}
+.product-img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease-out;
+}
+.product-img img:first-child {
+    z-index: 2;
+    opacity: 1;
+}
+.product-img .rear-img{
+    /* width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease-out; */
+    z-index: 3;
+    opacity: 0;
+}
+.product:hover .rear-img{
+    opacity: 1;
+    /* z-index: 0; */
+}
+.product-img:hover img:first-child {
+    opacity: 0;
+}
+.product-info{
+    padding: 1.2rem 1.2rem 0rem;
+    text-align: center;
+}
+.product-info div{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    margin-bottom: 0.7rem;
+}
+.product-name{
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    color: #2d465e;
+
+}
+.product-price{
+    color: #2d465e;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin: -0.5rem 1rem 0.5rem 1rem;
+    color: #FFB800;
+
+}
+
+.rating i {
+    color: #FFB800;
+    font-size: 16px;
+}
+
+.rating-number {
+    color: gray;
+    margin-left: 4px;
+    font-size: 14px;
+}
+
+
+
+.product-btn{
+    background-color: #f62f5e;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    padding: 0.5rem 1.8rem;
+    border-radius: 1.2rem;
+    -webkit-transition: background-color 0.5s ease-out;
+    -o-transition: background-color 0.5s ease-out;
+    transition: background-color 0.5s ease-out;
+}
+.product-btn:hover{
+    background-color: #f50e45;
+}
+.icon-div{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+}
+.icon i {
+    font-size: 20px;
+    color: gray;
+    margin-right: 20px;
+    cursor: pointer;
+    transition:all color 0.3s ease;
+}
+
+.icon i:hover {
+    color: #ff4d4d;
+}
+
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1.4rem;
+}
+
+@media screen and (max-width: 1200px){
+    .product-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px){
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px){
+    .product-grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* -----------end card Section----------- */
+
+/* -----------start button create.html----------- */
+.create-btn {
+    padding: 10px 20px;
+    background-color: var(--surface-color);
+    color: white;
+    /* border: 2px solid rgb(255 255 255 / .3); */
+    border-radius: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+.create-btn:hover {
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 92%);
+    /* border-color: var(--text-color) */
+}
+/* -----------end button create.html----------- */

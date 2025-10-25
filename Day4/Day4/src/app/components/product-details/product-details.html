@@ -1,0 +1,22 @@
+<div class="row product-details" *ngIf="products$ | async as p">
+<div class="col-sm-6">
+<img  class="product-img" src="{{p.image}}" alt="">
+</div>
+<div class="col-sm-6">
+    <div class="details">
+        <h1>{{p.title}}</h1>
+        <h3>Price : {{p.price}}</h3>
+        <h6>Category : {{p.category}}</h6>
+        <h6>Description : {{p.description}}</h6>
+        <button class="form-button">Buy Now</button>
+        <!-- <button *ngIf="removeCart" class="form-button" (click)=" removeToCart(p.id)">Remove to Cart</button> -->
+        <button *ngIf="!removeCart" class="form-button" (click)="addToCart(p)">Add to Cart</button>
+        <div class="quantity-group">
+            <!-- <button (click)="handleQuantity('min')" >-</button> -->
+            <!-- <input type="text" value="{{productQuantity}}" /> -->
+            <!-- <button (click)="handleQuantity('plus')">+</button> -->
+
+        </div>
+    </div>
+</div>
+</div>

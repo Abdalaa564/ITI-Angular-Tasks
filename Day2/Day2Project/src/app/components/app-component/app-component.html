@@ -1,0 +1,36 @@
+
+<main class="todo-container">
+    <div class="add-task">
+        <input type="text" #todoText placeholder="Add Todo">
+        <button (click)="addTask(todoText.value)">Add</button>
+    </div>
+    <ul class="task-list">
+      <li [class.completed]="todoList[0]?.completed">
+          <input type="checkbox"
+                  [(ngModel)]="todoList[0].completed"
+                  (change)="toggleCompleted(todoList[0].id)" />
+          <span [class.completed]="todoList[0]?.completed">{{ todoList[0]?.task }}</span>
+          <button class="delete-btn" (click)="deleteTask(todoList[0].id)">Delete</button>
+      </li>
+
+      <li [class.completed]="todoList[1]?.completed">
+          <input type="checkbox"
+                  [(ngModel)]="todoList[1].completed"
+                  (change)="toggleCompleted(todoList[1].id)" />
+          <span [class.completed]="todoList[1]?.completed">{{ todoList[1]?.task }}</span>
+          <button class="delete-btn" (click)="deleteTask(todoList[1].id)">Delete</button>
+      </li>
+
+      <li [class.completed]="todoList[2]?.completed">
+          <input type="checkbox"
+                  [(ngModel)]="todoList[2].completed"
+                  (change)="toggleCompleted(todoList[2].id)" />
+          <span [class.completed]="todoList[2]?.completed">{{ todoList[2]?.task }}</span>
+          <button class="delete-btn" (click)="deleteTask(todoList[2].id)">Delete</button>
+      </li>
+</ul>
+
+</main>
+
+
+<router-outlet />

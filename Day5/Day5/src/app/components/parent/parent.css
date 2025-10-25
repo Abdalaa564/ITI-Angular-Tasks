@@ -1,0 +1,30 @@
+li {
+  display: flex;
+  justify-content: space-between; /* النص على الشمال والزرار على اليمين */
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.delete-btn {
+  background: #ef4444;            /* أحمر */
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+  transform: translateY(-1px);
+}

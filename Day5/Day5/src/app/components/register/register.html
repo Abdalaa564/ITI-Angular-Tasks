@@ -1,0 +1,40 @@
+<div class="auth-container">
+  <h2>📝 Register</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <label>Name:</label>
+    <input type="text" formControlName="name" />
+    <div class="error" *ngIf="submitted && registerForm.get('name')?.invalid">
+      Name is required.
+    </div>
+
+    <label>Email address:</label>
+    <input type="email" formControlName="email" />
+    <div class="error" *ngIf="submitted && registerForm.get('email')?.invalid">
+      Valid email is required.
+    </div>
+
+    <label>Username:</label>
+    <input type="text" formControlName="username" />
+    <div class="error" *ngIf="submitted && registerForm.get('username')?.errors?.['noSpaces']">
+      Username must not contain spaces.
+    </div>
+
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+    <div class="error" *ngIf="submitted && registerForm.get('password')?.errors?.['weakPassword']">
+      Password must be at least 8 characters, include uppercase, lowercase, digit, and special character.
+    </div>
+
+    <label>Confirm Password:</label>
+    <input type="password" formControlName="confirmPassword" />
+    <div class="error" *ngIf="submitted && registerForm.errors?.['passwordMismatch']">
+      Passwords do not match.
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+  <div class="result" *ngIf="resultMessage">
+    <pre>{{ resultMessage }}</pre>
+  </div>
+
+</div>

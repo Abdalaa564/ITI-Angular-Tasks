@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url(https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css);
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto","Arial",sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --text-color: #fff;
+    --main-color: #0ef;
+    --second-bg-color: #323946;
+    --tw-bg-color: #445f8f47;
+}
+html { font-size: 62.5%; overflow-x: hidden; }
+
+body{ background: var(--bg-color); color: var(--text-color); }

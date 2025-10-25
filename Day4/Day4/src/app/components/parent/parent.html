@@ -1,0 +1,10 @@
+<h2>My To-Do List</h2>
+
+<app-child (addTodo)="onAddTodo($event)"></app-child>
+
+<ul>
+  <li *ngFor="let t of todo; let i = index">
+    <span>{{ t }}</span>
+    <button class="delete-btn" (click)="deleteTodo(i)">Delete</button>
+  </li>
+</ul>

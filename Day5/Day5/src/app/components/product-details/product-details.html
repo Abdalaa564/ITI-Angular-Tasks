@@ -1,0 +1,58 @@
+<div class="row product-details" *ngIf="products$ | async as p">
+
+    <div class="col-md-6">
+    <img class="product-img" [src]="p.thumbnail" [alt]="p.title" />
+    <div class="product-gallery">
+      <img *ngFor="let img of p.images" [src]="img" [alt]="p.title" />
+    </div>
+  </div>
+
+
+  <div class="col-md-6">
+    <div class="details">
+      <h1>{{ p.title }}</h1>
+      <h4 class="brand">Brand: <span>{{ p.brand }}</span></h4>
+      <h5 class="category">Category: {{ p.category }}</h5>
+      <p class="description">{{ p.description }}</p>
+
+      <div class="price-box">
+        <h2>${{ p.price }}</h2>
+        <span class="discount">-{{ p.discountPercentage }}%</span>
+      </div>
+
+      <div class="rating-stock">
+        <span class="rating">⭐ {{ p.rating }}/5</span>
+        <span class="stock" [ngClass]="{ 'out-of-stock': p.stock === 0 }">
+          {{ p.stock > 0 ? p.stock + ' in stock' : 'Out of stock' }}
+        </span>
+      </div>
+
+      <div *ngIf="p.tags?.length" class="tags">
+        <strong>Tags:</strong>
+        <span *ngFor="let tag of p.tags" class="tag">{{ tag }}</span>
+      </div>
+
+      <div *ngIf="p.sku" class="sku">
+        <strong>SKU:</strong> {{ p.sku }}
+      </div>
+
+      <div *ngIf="p.reviews?.length" class="reviews">
+        <h4>Customer Reviews</h4>
+        <div class="review-card" *ngFor="let review of p.reviews">
+            <div class="review-header">
+            <strong>{{ review.reviewerName }}</strong>
+            <span class="rating">⭐ {{ review.rating }}/5</span>
+            </div>
+            <p class="review-comment">"{{ review.comment }}"</p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-outline-secondary" (click)="addToCart(p)">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="products-container">
+     @for (p of products; track p.id) {
+  <div class="product-card">
+    <img [src]="p.image!" [alt]="p.title" />
+
+    <div class="details">
+      <h3>{{ p.title }}</h3>
+      <p>${{ p.price }}</p>
+      <p class="rating">⭐ {{ p.rating.rate }} ({{ p.rating.count }} reviews)</p>
+      <p>{{ p.stock }}</p>
+    </div>
+ 
+    <span class="badge out" *ngIf="p.stock === 0">Out of Stock</span>
+    <span class="badge in" *ngIf="p.stock > 0">In Stock</span>
+
+    <button class="btn btn-primary"
+        [disabled]="p.stock === 0"
+        (click)="addToCart(p)">
+      Add to Cart
+    </button>
+  </div>
+}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ************************************************************************** -->
+<!-- <div class="products-container">
+  <div class="product-card" *ngFor="let p of products">
+    <img [src]="p.image" [alt]="p.title" />
+
+    <div class="details">
+      <h3>{{ p.title }}</h3>
+      <p>\${{ p.price }}</p>
+        <p class="rating">⭐ {{ p.rating.rate }} ({{ p.rating.count }} reviews)</p>
+    </div>
+
+    <span class="badge out" *ngIf="p.stock === 0">Out of Stock</span>
+    <span class="badge in" *ngIf="p.stock > 0">In Stock</span>
+
+    <button class="btn btn-primary"
+            [disabled]="p.stock === 0"
+            (click)="addToCart(p)">
+      Add to Cart
+    </button>
+  </div>
+</div> -->

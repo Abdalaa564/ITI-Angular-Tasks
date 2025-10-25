@@ -1,0 +1,25 @@
+<div class="auth-container">
+  <h2>🔐 Login</h2>
+  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+    <label>Email address:</label>
+    <input type="email" name="email" [(ngModel)]="email" required />
+    <div class="error" *ngIf="submitted && (!email || !isEmailValid())">
+      Valid email is required.
+    </div>
+
+    <label>Password:</label>
+    <input type="password" name="password" [(ngModel)]="password" required />
+    <div class="error" *ngIf="submitted && !isPasswordValid()">
+      Password must be more than 6 characters.
+    </div>
+
+    <button type="submit">Login</button>
+    <li><a routerLink="/register">register</a></li>
+  </form>
+
+  <div class="result" *ngIf="resultMessage">
+    <pre>{{ resultMessage }}</pre>
+  </div>
+
+  
+</div>

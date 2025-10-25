@@ -1,0 +1,65 @@
+/* صندوق الإدخال */
+:host {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h3 {
+  margin-bottom: 16px;
+  text-align: center;
+  color: #0f172a;
+  font-size: 1.25rem;
+}
+
+/* حقل الإدخال */
+input[type="text"] {
+  width: 100%;          /* ياخد عرض الصندوق بالكامل */
+  max-width: 360px;     /* أقصى عرض حتى لا يكبر زيادة */
+  height: 48px;         /* ⬅️ ارتفاع ثابت مريح */
+  padding: 0 14px;      /* مسافة داخلية يمين/شمال */
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box; /* يحسب الـpadding جوة العرض */
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+
+/* زر الإضافة */
+button {
+  display: block;        /* يخلي الزر ياخد عرض الصندوق */
+  width: 100%;           /* نفس عرض الـinput */
+  max-width: 360px;      /* يساوي الـmax-width للـinput */
+  height: 48px;          /* نفس ارتفاع الـinput */
+  margin-top: 8px;       /* مسافة صغيرة فوق الزر */
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+button:hover {
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  transform: translateY(-1px);
+}
+
+
+button:active {
+  transform: translateY(0);
+}

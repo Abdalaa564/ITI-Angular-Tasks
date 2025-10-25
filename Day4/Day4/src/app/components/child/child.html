@@ -1,0 +1,6 @@
+<h3>Add New Task</h3>
+<input type="text"
+       placeholder="Write a task"
+       [(ngModel)]="newTask"
+       (keyup.enter)="sendTask()" />
+<button (click)="sendTask()">Add</button>
